@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    
+    <!-- A-FRAME verstehen: https://aframe.io/docs/1.1.0/introduction/  -->
+    <!--  geschriebene a-scene direkt ansehen: https://codepen.io/mozillavr/pen/BjygdO  -->
+    
+    <!-- Funktionierendes Skript: <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>  -->
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
     <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src=”https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <!-- Let’s attach community physics components to primitives. We include the source for Don McCurdy’s aframe-physics-system and attach the physics components via HTML attributes:   -->
+    <script src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"></script>
+                                                                                                  
     <body style="margin : 0px; overflow: hidden;">
         
         <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
@@ -16,8 +24,14 @@
             
         <a-marker preset="hiro">
             
+      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+                              
             <a-entity
-            position="0 0 0"
+            position="0 0 -10"
             rotation="0 90 270"
             scale="0.10 0.10 0.10"
             gltf-model="#bee"
