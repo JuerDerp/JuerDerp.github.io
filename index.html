@@ -8,14 +8,14 @@
         
         <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
                         
-        <a-assets>
-        <!-- Test-3D-Objekt, das klappte: <a-asset-item id="bee" src="/Export-gltf-Bee.gltf"></a-asset-item   und in 22:   gltf-model="#bee">    -->   -->
-        <!--     <a-asset-item id="bee" src="/Export-gltf-Bee.gltf"></a-asset-item>   -->
-        <!--  klappt: pollen  -->    
+        <a-assets>      
+           <a-asset-item id="test-obj" src="/01 - Sonnenblume/scaniverse-20210807-050304.obj"></a-asset-item>
+           <a-asset-item id="test-mtl" src="/01 - Sonnenblume/scaniverse-20210807-050304.mtl"></a-asset-item>  
+                                                                                             
+                      <!--  klappt: pollen, dateien im grundverzeichnis -->    
            <!--  <a-asset-item id="test-obj" src="/model_492380983510.obj"></a-asset-item>   -->    
-           <!--  <a-asset-item id="test-mtl" src="/model_492380983510.mtl"></a-asset-item>   -->            
-           <a-asset-item id="test-obj" src="/model_492380983510.obj"></a-asset-item>
-           <a-asset-item id="test-mtl" src="/model_492380983510.mtl"></a-asset-item>  
+           <!--  <a-asset-item id="test-mtl" src="/model_492380983510.mtl"></a-asset-item>   -->                                                                                   
+                                                                                             
         </a-assets>
  
             
@@ -23,21 +23,19 @@
             
             <a-entity
             position="0 0 0"
-            rotation="90 90 0"
+            rotation="0 0 0"
             scale="1.80 1.80 1.80"     
             obj-model="obj: #test-obj ; mtl: #test-mtl"
-        <!-- klappt - pollen     -->
+                                                       
+                  <!-- klappt - pollen     -->
             <!-- position="0 0 0"   -->
-            <!-- rotation="0 90 270"   -->
+            <!-- rotation="90 90 0"   -->
             <!-- scale="1.10 1.10 1.10"   -->
             <!-- obj-model="obj: #test-obj ; mtl: #test-mtl"   -->
-         <!-- klappt: baum -->
-            <!-- position="0 0 0" -->
-            <!-- rotation="0 90 270"  -->
-            <!-- scale="0.10 0.10 0.10" -->
-            <!-- gltf-model="#bee" -->
+                                                            
             ></a-entity>
             
+                                                            
         </a-marker>evice movemenents -->
         <!-- static camera that moves according to the device movemenents -->
         <a-entity camera></a-entity>
