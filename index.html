@@ -33,17 +33,13 @@
                                                     
                                                     
                                                     
-        <a-marker id="animated-marker" type='barcode' value='2'>
+        <a-marker id="animated-marker" type='barcode' value='2';  smooth:  true;  smoothCount:  10;  smoothThreshold:  5>
           <a-entity                                       
             position="0 0 0"
             rotation="50 90 -90"              
             scale="1.00 1.00 1.00"     
             obj-model="obj: #test-obj ; mtl: #test-mtl"
           ></a-entity>
-      smooth="true"
-      smoothCount="10"
-      smoothTolerance=".01"
-      smoothThreshold="5"    
         </a-marker>                       
 
 
