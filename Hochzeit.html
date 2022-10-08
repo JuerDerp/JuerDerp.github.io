@@ -1,32 +1,49 @@
 <html>
+
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
   </head>
+
+<style>
+  #box {
+   height: 25%; /* Höhe-der-div-Box */
+   width: 75%; /* Breite-der-div-Box */
+   margin-top: -70%; /*-Damit-der Ausrichtungspunkt in der Mitte-der-Box-liegt */
+   margin-left: 12.5%;
+   position: absolute; /*positionieren*/
+   z-index: 24748;
+   opacity:-0.85;
+/* weitere- Angaben */
+   background-color: #10384f;
+   border: 2px solid white;
+  }
+  </style>
+	
   <body>
+
     <a-scene mindar-image="imageTargetSrc: targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
  
-  <a-assets>
+      <a-assets>
 	<a-asset-item id="avatarModel" src="scene-small-kranz.glb"></a-asset-item>
-  </a-assets>
+      </a-assets>
 
      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
       <a-entity mindar-image-target="targetIndex: 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 1000">
-
         <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.0005 0.0005 0.0005" src="#avatarModel">
-
       </a-entity>
+
     </a-scene>
 
 
-<div id="boxOne" style="display:; padding: 15px;">
-  <div onclick="window.location.href='https://www.bayer.com/en/';" style="cursor: pointer;">
-    <h1 style="color:white;">Instructions</h1>
+ <div id="box" style="display:none; padding: 15px;">
+  <div onclick="window.location.href='https://www.web.de';" style="cursor: pointer; padding: 5px;">
+    <h1 style="color:white;">Auf diesen Text tippen, um zu den Fotos zu gelangen</h1>
   </div>
-</div>
+ </div>
 
   </body>
 </html>
